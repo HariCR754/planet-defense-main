@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planet Defense</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/player.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="canvasJoystick"></canvas>
+
+    <div id="container">
+      <div id="canvasWrapper">
+        <canvas id="canvas1"></canvas>
+        <div id="settingsButton"></div>
+        <div id="settingsMenu">
+          <div class="inner">
+            <button class="button" role="button" id="resumeButton">
+              Resume
+            </button>
+            <button class="button" role="button" id="restartButton">
+              Restart
+            </button>
+            <div class="menu-group">
+              <label for="musicVolume">Music</label>
+              <input type="range" id="musicVolume" min="0" max="100" />
+            </div>
+            <div class="menu-group">
+              <label for="soundEffectVolume">Sound</label>
+              <input type="range" id="soundEffectVolume" min="0" max="100" />
+            </div>
+            <div class="menu-group">
+              <label>Autoshoot</label>
+              <div class="switch-container">
+                <input type="checkbox" class="checkbox" id="autoShootSwitch" />
+                <label class="switch" for="autoShootSwitch">
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden">
+      <div class="images">
+        <img src="./assets/images/background.png" id="background" />
+        <img src="./assets/images/planet.png" id="planet" />
+        <img src="./assets/images/player.png" id="player" />
+        <img src="./assets/images/asteroid.png" id="asteroid" />
+        <img src="./assets/images/lobstermorph.png" id="lobstermorph" />
+        <img src="./assets/images/beetlemorph.png" id="beetlemorph" />
+        <img src="./assets/images/rhinomorph.png" id="rhinomorph" />
+      </div>
+      <div class="sounds">
+        <audio src="./assets/sounds/Shoot_01.wav" id="playerShootSound"></audio>
+        <audio
+          src="./assets/sounds/Explosion_02.wav"
+          id="enemyExplosionSound"
+        ></audio>
+        <audio src="./assets/sounds/Hit_02.wav" id="enemyHitSound"></audio>
+        <audio src="./assets/sounds/Game Over.mp3" id="gameOverSound"></audio>
+        <audio
+          src="./assets//sounds/awake10_megaWall_Music.mp3"
+          id="gameMusic"
+        ></audio>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
